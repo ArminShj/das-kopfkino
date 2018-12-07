@@ -1,0 +1,148 @@
+// reset
+// -----
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+article,
+aside,
+div,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+// breakpoints
+// -----------
+$breakpoint-sm-min: 576px;
+$breakpoint-md-min: 768px;
+$breakpoint-lg-min: 992px;
+$breakpoint-xl-min: 1200px;
+// grid
+// ----
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    min-width: 200px;
+    @include webkit (transition, 0.4s);
+    @include sm {
+        max-width: 540px;
+    }
+    @include md {
+        max-width: 720px;
+    }
+    @include lg {
+        max-width: 960px;
+    }
+    @include xl {
+        max-width: 1140px;
+    }
+}
+
+// typography
+// ----------
+@include font-face ('dubai', '../fonts/DubaiW23-Light', 100);
+@include font-face ('dubai', '../fonts/DubaiW23-Regular', 400);
+@include font-face ('dubai', '../fonts/DubaiW23-Medium', 700);
+@include font-face ('dubai', '../fonts/DubaiW23-Bold', 900);
+body {
+    direction: rtl;
+    font-family: $font, tahoma;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+button {
+    font-family: $font, tahoma;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+h5 {
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+h6 {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.navbar {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.article--info {
+    font-size: 0.9em;
+}
+
+blockquote {
+    font-style: italic;
+    font-weight: 100;
+}
+
+footer {
+    &.footer {
+        font-size: 0.9em;
+    }
+}
+
+// basics
+// ------
+hr {
+    border-top: 1px solid $gray-color;
+    border-bottom: 1px solid $gray-color;
+    height: 6px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}

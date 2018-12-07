@@ -1,0 +1,210 @@
+// layouts
+// -------
+body {
+    padding-top: $navbar-height;
+}
+
+// navigation
+// ----------
+nav {
+    &.navbar {
+        background-color: $dark-color;
+        height: $navbar-height;
+    }
+    &.navbar__onscroll {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    &>.container {
+        padding-top: 12px;
+        padding-bottom: 10px;
+        & ul {
+            display: inline;
+            &>li {
+                display: inline;
+                &>a {
+                    @include webkit (transition, 0.4s);
+                    padding: 12px 14px 8px 14px;
+                }
+                &>a:link,
+                &>a:visited {
+                    color: $white-color;
+                }
+                &>a:hover,
+                &>a:active {
+                    background-color: $light-color;
+                    color: $accent-color;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+// article
+// -------
+article {
+    &.article {
+        border-bottom: 1px dashed $gray-color;
+        text-align: justify;
+    }
+    &.article:first-of-type {
+        &>.article--body {
+            margin-top: 15px;
+        }
+    }
+    &.article:last-of-type {
+        border-bottom: 0;
+    }
+    &>.article--body {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        &>.article--title {
+            margin-bottom: 12px;
+            &>a {
+                @include webkit (transition, 0.4s);
+            }
+            &>a:link,
+            &>a:visited {
+                color: $accent-color;
+            }
+            &>a:hover,
+            &>a:active {
+                color: $secondary-color;
+            }
+            &>.article--info {
+                color: $semi-gray-color;
+                margin-top: -12px;
+                &>.article--time {
+                    color: $gray-color;
+                }
+                &>.article--category {
+                    &>a {
+                        @include webkit (transition, 0.4s);
+                    }
+                    &>a:link,
+                    &>a:visited {
+                        color: $accent-color;
+                    }
+                    &>a:hover,
+                    &>a:active {
+                        color: $secondary-color;
+                    }
+                }
+            }
+            &>hr {
+                border-top: 0;
+                border-bottom-color: $semi-light-color;
+                margin: 4px 0 20px 0;
+                width: 30%;
+            }
+        }
+        &>.article--content {
+            & .article--post-thumbnail {
+                &>img {}
+            }
+            & a {
+                @include webkit (transition, 0.4s);
+            }
+            & a:link,
+            & a:visited {
+                color: $difference-color;
+            }
+            & a:hover,
+            & a:active {
+                color: $accent-color;
+            }
+            & hr {
+                width: 20%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            & blockquote {
+                background-color: $dark-color;
+                color: $white-color;
+                margin: 12px 0 20px 0;
+                padding: 20px 15px;
+                & p {
+                    margin: 8px 0;
+                }
+            }
+            & ol {
+                list-style-type: decimal;
+                margin: 12px 20px 20px 20px;
+            }
+            & ul {
+                list-style-type: circle;
+                margin: 12px 20px 20px 20px;
+            }
+            & p {
+                margin: 12px 0 20px 0;
+                & a {
+                    &.more-link {
+                        &>button.more-link {
+                            background-color: $light-color;
+                            color: $accent-color;
+                            cursor: pointer;
+                            margin-top: 20px;
+                            padding: 12px 16px;
+                            @include webkit (transition, 0.4s);
+                        }
+                        &>button.more-link:hover {
+                            background-color: $secondary-color;
+                            color: $white-color;
+                        }
+                        &>button.full-width {
+                            position: relative;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+// ------
+footer {
+    &.footer {
+        background-color: $dark-color;
+        color: $light-color;
+    }
+    &>.flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &>.container {
+        padding-top: 14px;
+        padding-bottom: 8px;
+        &>.description {
+            & p {
+                padding: 8px 0;
+            }
+        }
+        &>.social-links {
+            & ul {
+                display: inline;
+                &>li {
+                    display: inline;
+                    font-size: 2em;
+                    &>a {
+                        @include webkit (transition, 0.4s);
+                        padding: 8px 4px;
+                    }
+                    &>a:link,
+                    &>a:visited {
+                        color: $white-color;
+                    }
+                    &>a:hover,
+                    &>a:active {
+                        color: $accent-color;
+                    }
+                }
+            }
+        }
+    }
+}

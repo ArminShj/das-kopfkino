@@ -1,0 +1,70 @@
+// mixins
+// -------
+// font-face
+@mixin font-face ($font-name, $font-path, $font-weight) {
+    @font-face {
+        font-family: $font-name;
+        font-style: normal;
+        font-weight: $font-weight;
+        src: url('#{$font-path}.eot');
+        src: url('#{$font-path}.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path}.woff2') format('woff2'),
+        url('#{$font-path}.woff') format('woff'),
+        url('#{$font-path}.ttf') format('truetype');
+    }
+}
+
+// media
+@mixin sm {
+    @media (min-width: #{$breakpoint-sm-min}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{$breakpoint-md-min}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: #{$breakpoint-lg-min}) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: #{$breakpoint-xl-min}) {
+        @content;
+    }
+}
+
+// webkit
+@mixin webkit ($props,
+$value) {
+    -webkit-#{$props}: $value;
+    -moz-#{$props}: $value;
+    -ms-#{$props}: $value;
+    -o-#{$props}: $value;
+}
+
+// variables
+//----------
+// colors
+$accent-color:#39A9DB;
+$black-color: #001011;
+$dark-color: #353839;
+$difference-color: #FF6700;
+$gray-color: #838383;
+$semi-gray-color: #ababab;
+$light-color: #f8f8f8;
+$secondary-color: #1C77C3;
+$semi-light-color: #ebebeb;
+$white-color: #ffffff;
+// veification
+$default-color: $white-color;
+$text-color: $black-color;
+// font
+$font: 'dubai';
+// sizes
+$navbar-height: 50px;
